@@ -14,6 +14,26 @@
     if ($CHECK_Attachment == true):
         while($DataTemp = mysqli_fetch_assoc($ResultQuery)):
 ?>
+<div class="modal-header">
+    <h1 class="modal-title fs-5" id="staticBackdropLabel"><?php echo $DataTemp['post_title'] . ' (' . $DataTemp['post_mime_type'] . ')'; ?></h1>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <form class="row g-3">
+        <div class="col-12">
+            <label for="" class="form-label">Uploader</label>
+            <input type="text" class="form-control" id="" placeholder="" value="<?php echo $DataTemp['display_name']; ?>" readonly>
+        </div>
+        <div class="col-12">
+            <label for="" class="form-label">Uploaded On</label>
+            <input type=datetime-local class="form-control" step="1" id="change_UploadedOn" value="<?php echo $DataTemp['post_date']; ?>">
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="bi bi-floppy"></i> Save Changes</button>
+        </div>
+    </form>
+</div>
+<div class="modal-footer"></div>
 <?php
         endwhile;
     endif;
