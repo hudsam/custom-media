@@ -34,6 +34,13 @@
     </form>
 </div>
 <div class="modal-footer"></div>
+<script>
+    datetimeInput = document.getElementById('change_UploadedOn');
+    datetimeInput.addEventListener('change', function() {
+        formattedValue = datetimeInput.value.replace("T", " ");
+        console.log("change_UploadedOn: ", formattedValue);
+    });
+</script>
 <?php
         endwhile;
     endif;
