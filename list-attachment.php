@@ -23,9 +23,9 @@
                 <tr>
                     <td title="<?php echo $DataTemp['ID']; ?>"><?php echo $DataTemp['display_name']; ?></td>
                     <td style="text-align: center;"><?php echo $DataTemp['post_date']; ?></td>
-                    <td><a href="<?php echo $DataTemp['guid']; ?>" target="_blank"><?php echo $DataTemp['post_title']; ?></a></td>
+                    <td><?php echo $DataTemp['post_title']; ?> | <a href="<?php echo $DataTemp['guid']; ?>" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a></td>
                     <td><?php echo $DataTemp['post_mime_type']; ?></td>
-                    <td></td>
+                    <td><button type="button" class="btn btn-sm btn-outline-dark"><i class="bi bi-pencil-square"></i> Ubah</button></td>
                 </tr>
                 <?php endwhile; ?>
             </tbody>
