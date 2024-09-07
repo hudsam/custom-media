@@ -6,44 +6,41 @@
     include './template/header.php';
 ?>
 
-<table id="example" class="display" style="width:100%">
-    <thead>
-        <tr>
-            <th>display_name</th>
-            <th>ID</th>
-            <th>post_date</th>
-            <th>post_title</th>
-            <th>post_mime_type</th>
-            <th>post_modified</th>
-            <th># Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php while($DataTemp = mysqli_fetch_assoc($ResultQuery)): ?>
-        <tr>
-            <td><?php echo $DataTemp['display_name']; ?></td>
-            <td><?php echo $DataTemp['ID']; ?></td>
-            <td><?php echo $DataTemp['post_date']; ?></td>
-            <td><a href="<?php echo $DataTemp['guid']; ?>" target="_blank"><?php echo $DataTemp['post_title']; ?></a></td>
-            <td><?php echo $DataTemp['post_mime_type']; ?></td>
-            <td><?php echo $DataTemp['post_modified']; ?></td>
-            <td></td>
-        </tr>
-        <?php endwhile; ?>
-    </tbody>
-    <tfoot>
-        <tr>
-            <th>display_name</th>
-            <th>ID</th>
-            <th>post_date</th>
-            <th>post_title</th>
-            <th>post_mime_type</th>
-            <th>post_modified</th>
-            <th># Action</th>
-        </tr>
-    </tfoot>
-</table>
-
+<div class="container">
+    <div class="table-responsive">
+        <table id="example" class="table table-striped table-hover display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Pengunggah</th>
+                    <th>Waktu Unggah</th>
+                    <th>Judul</th>
+                    <th>Jenis Dok.</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while($DataTemp = mysqli_fetch_assoc($ResultQuery)): ?>
+                <tr>
+                    <td title="<?php echo $DataTemp['ID']; ?>"><?php echo $DataTemp['display_name']; ?></td>
+                    <td style="text-align: center;"><?php echo $DataTemp['post_date']; ?></td>
+                    <td><a href="<?php echo $DataTemp['guid']; ?>" target="_blank"><?php echo $DataTemp['post_title']; ?></a></td>
+                    <td><?php echo $DataTemp['post_mime_type']; ?></td>
+                    <td></td>
+                </tr>
+                <?php endwhile; ?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Pengunggah</th>
+                    <th>Waktu Unggah</th>
+                    <th>Judul</th>
+                    <th>Jenis Dok.</th>
+                    <th>Aksi</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
 <?php
     include './template/footer.php';
 ?>
