@@ -25,7 +25,7 @@
                     <td style="text-align: center;"><?php echo $DataTemp['post_date']; ?></td>
                     <td><?php echo $DataTemp['post_title']; ?> | <a href="<?php echo $DataTemp['guid']; ?>" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a></td>
                     <td><?php echo $DataTemp['post_mime_type']; ?></td>
-                    <td><button type="button" class="btn btn-sm btn-outline-dark"><i class="bi bi-pencil-square"></i> Ubah</button></td>
+                    <td></td>
                 </tr>
                 <?php endwhile; ?>
             </tbody>
@@ -41,6 +41,7 @@
         </table>
     </div>
 </div>
+
 <?php
     include './template/footer.php';
 ?>
