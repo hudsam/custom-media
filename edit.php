@@ -19,7 +19,7 @@
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-    <form class="row g-3">
+    <form class="row g-3" method="post" action="./save.php">
         <div class="col-12">
             <label for="" class="form-label">Uploader</label>
             <input type="text" class="form-control" id="" placeholder="" value="<?php echo $DataTemp['display_name']; ?>" readonly>

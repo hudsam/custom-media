@@ -24,7 +24,7 @@
                     <td style="text-align: center;"><?php echo $DataTemp['post_date']; ?></td>
                     <td><?php echo $DataTemp['post_title']; ?> | <a href="<?php echo $DataTemp['guid']; ?>" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a></td>
                     <td><?php echo $DataTemp['post_mime_type']; ?></td>
-                    <td><button type="button" class="btn btn-sm btn-outline-dark button-ChangeUploadOn" data-bs-toggle="modal" data-bs-target="#modal-ChangeUploadOn" id="button-ChangeUploadOn" data-href="./edit-attachment.php?id=<?php echo $DataTemp['ID']; ?>"><i class="bi bi-pencil-square"></i> Uploaded On</button></td>
+                    <td><button type="button" class="btn btn-sm btn-outline-dark button-ChangeUploadOn" data-bs-toggle="modal" data-bs-target="#modal-ChangeUploadOn" id="button-ChangeUploadOn" data-href="./edit.php?id=<?php echo $DataTemp['ID']; ?>"><i class="bi bi-pencil-square"></i> Uploaded On</button></td>
                 </tr>
                 <?php endwhile; ?>
             </tbody>
