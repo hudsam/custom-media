@@ -20,16 +20,19 @@
 </div>
 <div class="modal-body">
     <form class="row g-3" method="post" action="./save.php">
+        <input type="hidden" name="ID" value="<?php echo $DataTemp['ID']; ?>">
+        <input type="hidden" name="post_title" value="<?php echo $DataTemp['post_title']; ?>">
+        <input type="hidden" name="post_mime_type" value="<?php echo $DataTemp['post_mime_type']; ?>">
         <div class="col-12">
             <label for="" class="form-label">Uploader</label>
-            <input type="text" class="form-control" id="" placeholder="" value="<?php echo $DataTemp['display_name']; ?>" readonly>
+            <input type="text" class="form-control" id="" placeholder="" value="<?php echo $DataTemp['display_name']; ?>" name="display_name" readonly>
         </div>
         <div class="col-12">
             <label for="" class="form-label">Uploaded On</label>
-            <input type=datetime-local class="form-control" step="1" id="change_UploadedOn" value="<?php echo $DataTemp['post_date']; ?>">
+            <input type=datetime-local class="form-control" step="1" id="change_UploadedOn" value="<?php echo $DataTemp['post_date']; ?>" name="post_date">
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-sm btn-primary"><i class="bi bi-floppy"></i> Save Changes</button>
+            <button type="submit" class="btn btn-sm btn-primary" name="submit" value="save_UploadedOn"><i class="bi bi-floppy"></i> Save Changes</button>
         </div>
     </form>
 </div>
