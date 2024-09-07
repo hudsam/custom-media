@@ -8,6 +8,13 @@
         $('#example').DataTable({
 
         });
+
+        $('.button-ChangeUploadOn').on('click',function(){
+            var Tautan = $(this).data('href');
+            $('.modal-content').load(Tautan,function(){
+                $('#modal-ChangeUploadOn').modal({show:true});
+            });
+        });
     });
 </script>
 </html>
