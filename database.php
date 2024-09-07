@@ -1,7 +1,12 @@
 <?php
     // Src: https://stackoverflow.com/a/7928917
-    require_once '../../wp-config.php';
-    
+    $WP_CONFIG = '../../wp-config.php';
+    if (!file_exists($WP_CONFIG)) {
+        require_once './db-development.php';
+    } else {
+        require_once $WP_CONFIG;
+    }
+
     $DB_HOST = DB_HOST;
     $DB_NAME = DB_NAME;
     $DB_USER = DB_USER;
