@@ -11,11 +11,11 @@
         <table id="example" class="table table-striped table-hover display" style="width:100%">
             <thead>
                 <tr>
-                    <th>Pengunggah</th>
-                    <th>Waktu Unggah</th>
-                    <th>Judul</th>
-                    <th>Jenis Dok.</th>
-                    <th>Aksi</th>
+                    <th>Uploader</th>
+                    <th>Uploaded On</th>
+                    <th>Title Doc</th>
+                    <th>Type Doc</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,11 +31,11 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <th>Pengunggah</th>
-                    <th>Waktu Unggah</th>
-                    <th>Judul</th>
-                    <th>Jenis Dok.</th>
-                    <th>Aksi</th>
+                    <th>Uploader</th>
+                    <th>Uploaded On</th>
+                    <th>Title Doc</th>
+                    <th>Type Doc</th>
+                    <th>Action</th>
                 </tr>
             </tfoot>
         </table>
