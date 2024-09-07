@@ -6,7 +6,7 @@
     include './template/header.php';
 ?>
 
-<div class="container">
+<div class="container-fluid">
     <div class="table-responsive">
         <table id="example" class="table table-striped table-hover display" style="width:100%">
             <thead>
