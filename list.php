@@ -24,7 +24,7 @@
                     <td style="text-align: center;"><?php echo $DataTemp['post_date']; ?></td>
                     <td><?php echo $DataTemp['post_title']; ?> | <a href="<?php echo $DataTemp['guid']; ?>" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a></td>
                     <td><?php echo $DataTemp['post_mime_type']; ?></td>
-                    <td><button type="button" class="btn btn-sm btn-outline-dark button-ChangeUploadOn" data-bs-toggle="modal" data-bs-target="#modal-ChangeUploadOn" id="button-ChangeUploadOn" data-href="./edit.php?id=<?php echo $DataTemp['ID']; ?>"><i class="bi bi-pencil-square"></i> Uploaded On</button></td>
+                    <td><a class="btn btn-sm btn-outline-dark" href="./tab-edit.php?id=<?php echo $DataTemp['ID']; ?>"><i class="bi bi-pencil-square"></i> Edit</button></td>
                 </tr>
                 <?php endwhile; ?>
             </tbody>
@@ -38,13 +38,6 @@
                 </tr>
             </tfoot>
         </table>
-    </div>
-</div>
-
-<div class="modal fade" id="modal-ChangeUploadOn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md modal-dialog-centered">
-        <div class="modal-content">
-        </div>
     </div>
 </div>
 <?php
