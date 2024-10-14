@@ -8,6 +8,10 @@
         @import url("https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css");
         @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
         th { text-align: center !important; }
+        .loading-gif { max-width: 500px; }
+        .pre-loader { position: fixed; z-index: 100; top: 0; left: 0; background: #191f26; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; }
+        .pre-loader.hidden { animation: fadeOut 2s; animation-fill-mode: forwards; }
+        @keyframes fadeOut { 100% { opacity: 0; visibility: hidden; } }
     </style>
 </head>
 <body>

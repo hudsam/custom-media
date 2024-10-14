@@ -1,3 +1,6 @@
+<div class="pre-loader">
+    <img class="loading-gif" src="https://media0.giphy.com/media/11FuEnXyGsXFba/source.gif"/>
+</div>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
@@ -15,6 +18,10 @@
                 $('#modal-ChangeUploadOn').modal({show:true});
             });
         });
+    });
+
+    window.addEventListener('load', function () {
+        document.querySelector('.pre-loader').className += ' hidden';
     });
 </script>
 </html>
